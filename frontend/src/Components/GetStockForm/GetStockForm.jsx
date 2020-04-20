@@ -32,7 +32,7 @@ class GetStockForm extends Component {
             buyCommission: this.state.buyCommission,
             capitalGainTaxRate: this.state.capitalGainTaxRate,
         }
-        axios.post(' http://127.0.0.1:5000/getStock', stockData).then(
+        axios.post(' http://localhost:5000/getStock', stockData).then(
             (res) => {
                 this.setState({ stockResponse: res.data });
                 console.log(this.state.stockResponse);
